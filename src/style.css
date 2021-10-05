@@ -1,0 +1,142 @@
+/* headings */
+
+@font-face {
+    font-family: 'Permanent Marker';
+    src: url('./assetsDir/Permanent_Marker/PermanentMarker-Regular.ttf');
+    font-style: normal;
+}
+
+/* text */
+
+@font-face {
+    font-family: 'Nova Slim';
+    src: url('./assetsDir/Nova_Slim/NovaSlim-Regular.ttf');
+}
+
+:root {
+    --lightblack: #06111c;
+    --backColor: #121317;
+    --boldText: #FFEB4D;
+    --lightText: #bec7c7;
+    --btn: #bb2020;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121317;
+    overflow: hidden;
+    height: 100%;
+}
+
+h1 {
+    font-family: 'Permanent Marker';
+    text-align: center;
+    color: var(--boldText);
+}
+
+p {
+    font-family: 'Nova Slim', cursive;
+    text-align: center;
+    color: var(--lightText);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 20%;
+    background-color: #06111c;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    width: 90%;
+}
+
+#logo {
+    width: 42px;
+    height: 42px;
+}
+
+#logoDiv {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: block;
+    position: relative;
+    float: left;
+    width: 96px;
+    padding: 0;
+    margin: 10px 10px 10px 0;
+    font-weight: 600;
+    text-align: center;
+    line-height: 36px;
+    color: var(--btn);
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    scale: 1.05;
+    box-shadow: 2px 2px 3px var(--boldText);
+}
+
+.active {
+    border-bottom: 3px solid var(--boldText);
+}
+
+/* hero content styling*/
+
+#hero {
+    position: relative;
+}
+
+#hero>.heroChild:nth-child(1) {
+    /* display: flex; */
+    width: 180px;
+    height: 430px;
+    /* height: auto; */
+    background-color: var(--btn);
+    float: left;
+    content: "";
+    transform: rotate(49deg);
+    position: absolute;
+    top: 91px;
+}
+
+#hero>.heroChild:nth-child(1)::before {
+    width: 182px;
+    height: 163px;
+    background-color: var(--btn);
+    content: '';
+    position: absolute;
+    border-radius: 35%;
+    left: -1px;
+    top: -96px;
+}
+
+#hero>.heroChild:nth-child(1)::after {
+    width: 163px;
+    height: 500px;
+    background-color: #bb2020;
+    content: '';
+    position: absolute;
+    border-radius: 0px 0 25% 14%;
+    left: 133px;
+    top: -441px;
+    transform: rotate(41deg);
+}
+
+/* .road{
+  
+} */

@@ -1,0 +1,4 @@
+background : #121317
+text : #FFEB4D
+shade shadow : #bec7c7
+nav item color : #06111c
