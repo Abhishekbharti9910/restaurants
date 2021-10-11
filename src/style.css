@@ -136,7 +136,86 @@ nav {
     top: -441px;
     transform: rotate(41deg);
 }
+#hero>.heroChild:nth-child(2){
+    width: 200px;
+    height: 200px;
+    border-radius: 45%;
+    background-color: var(--boldText);
+    float: right;
+    position: absolute;
+    right: 32%;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Permanent Marker';
+    z-index: 10;
+}
+.pulse{
+    animation: pulse-animation 2s infinite;
+}
+#hero>.heroChild:nth-child(2)>h2{
+    color: var(--btn);
+}
+#hero>.heroChild:nth-child(2)>h2:hover{
+    transform: scale(1.1);
+}
+#hero>.heroChild:nth-child(3){
+    width: 292px;
+    position: absolute;
+    right: 69px;
+    top: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: x-large;
 
+}
+#hero>.heroChild:nth-child(4){
+    width: 600px;
+    height: 200px;
+    position: absolute;
+    top: 300px;
+    left: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    color: var(--lightText);
+    text-align: center;
+    line-height: 4px;
+}
+#burger{
+    width: 160px;
+    height: 150px;
+    position: absolute;
+    left: 5%;
+}
+#donut{
+    width: 200px;
+    height: 190px;
+    position: absolute;
+    top: 160px;
+    left: 405px;
+}
+#combo{
+    width: 90px;
+    height: 80px;
+    border-radius: 25%;
+
+}
+@keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0px rgba(155, 151, 151, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+  }
 /* .road{
   
 } */
