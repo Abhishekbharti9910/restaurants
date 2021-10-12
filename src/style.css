@@ -29,7 +29,6 @@
 
 body {
     background-color: #121317;
-    overflow: hidden;
     height: 100%;
 }
 
@@ -126,42 +125,24 @@ nav {
 }
 
 #hero>.heroChild:nth-child(1)::after {
-    width: 163px;
-    height: 500px;
+    width: 162px;
+    height: 255vh;
     background-color: #bb2020;
     content: '';
     position: absolute;
     border-radius: 0px 0 25% 14%;
-    left: 133px;
-    top: -441px;
+    left: 176px;
+    bottom: -133px;
     transform: rotate(41deg);
 }
-#hero>.heroChild:nth-child(2){
-    width: 200px;
-    height: 200px;
-    border-radius: 45%;
-    background-color: var(--boldText);
-    float: right;
-    position: absolute;
-    right: 32%;
-    top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-family: 'Permanent Marker';
-    z-index: 10;
-}
-.pulse{
-    animation: pulse-animation 2s infinite;
-}
+
 #hero>.heroChild:nth-child(2)>h2{
     color: var(--btn);
 }
 #hero>.heroChild:nth-child(2)>h2:hover{
     transform: scale(1.1);
 }
-#hero>.heroChild:nth-child(3){
+#hero>.heroChild:nth-child(2){
     width: 292px;
     position: absolute;
     right: 69px;
@@ -174,7 +155,7 @@ nav {
     font-size: x-large;
 
 }
-#hero>.heroChild:nth-child(4){
+#hero>.heroChild:nth-child(3){
     width: 600px;
     height: 200px;
     position: absolute;

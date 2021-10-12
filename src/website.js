@@ -1,10 +1,7 @@
 import './style.css';
 import Icon from './assetsDir/logo.png';
-import burger from './assetsDir/burger.png'
-import donut from './assetsDir/donut.png'
-import combo from './assetsDir/combo.png'
-
-
+import menu from './menu';
+// import home from "./home";
 const btnCreation = (btnName)=>{
     const Btn = document.createElement("button");
     Btn.id = btnName;
@@ -34,48 +31,7 @@ const logoMaker = ()=>{
     return logoInHead;
 }
 
-const heroContent = ()=>{
-    const hero = document.createElement("div");
-    let child1 = document.createElement("div");
-    let child2 = document.createElement("div");
-    let child3 = document.createElement("div");
-    let child4 = document.createElement("div");
-    let orderElement = document.createElement("h2");
-    let child3Text = document.createElement("h1");
-    child3Text.innerHTML = "We serve the street taste to your door step";
-    child3.appendChild(child3Text);
-    let paraDiv = document.createElement("div");
-    let para = document.createElement("p");
-    para.innerHTML = 'Dilever street food from your local favourite in a instant';
-    paraDiv.appendChild(para);
-    orderElement.innerHTML = "ORDER";
-    hero.id = "hero";
-    child1.classList.add("heroChild");
-    child2.classList.add("heroChild");
-    child3.classList.add("heroChild");
-    child4.classList.add("heroChild");
-    child2.classList.add("pulse");
-    hero.appendChild(child1);
-    hero.appendChild(child2);
-    hero.appendChild(child3);
-    hero.appendChild(child4);
-    child2.appendChild(orderElement);
-    // adding img to hero content
-    const img1 = new Image();
-    const img2 = new Image();
-    const img3 = new Image();
-    img1.src = burger;
-    img1.id = "burger";
-    img2.src =donut;
-    img2.id = "donut";
-    img3.src = combo;
-    img3.id = "combo";
-    child4.appendChild(img3);
-    child4.appendChild(paraDiv);
-    hero.appendChild(img1);
-    hero.appendChild(img2);
-    return hero;
-}
+
 
 const header = ()=>{
     const header = document.createElement("div");
@@ -119,7 +75,7 @@ const initialise = function () {
     content.appendChild(heading());
 
     //home page hero content
-    content.appendChild(heroContent());
+    content.appendChild(menu);
 }
 
 const website = (()=>{
