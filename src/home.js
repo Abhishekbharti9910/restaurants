@@ -1,32 +1,25 @@
 import burger from './assetsDir/burger.png'
 import donut from './assetsDir/donut.png'
 import combo from './assetsDir/combo.png'
-// making body slidable
-const scrollOff = ()=>{
-    body.style.overflow = "hidden";
-}
-function heroContent(){
-    scrollOff();
-    const hero = document.createElement("div");
-    let child1 = document.createElement("div");
-    // let child2 = document.createElement("div");
-    let child3 = document.createElement("div");
-    let child4 = document.createElement("div");
+
+
+    function heroContent(){
+    const hero = document.querySelector("#hero");
+    let heroChild2 = document.createElement("div");
+    let heroChild3 = document.createElement("div");
     let orderElement = document.createElement("h2");
     let child3Text = document.createElement("h1");
     child3Text.innerHTML = "We serve the street taste to your door step";
-    child3.appendChild(child3Text);
+    heroChild2.appendChild(child3Text);
     let paraDiv = document.createElement("div");
     let para = document.createElement("p");
     para.innerHTML = 'Dilever street food from your local favourite in a instant';
     paraDiv.appendChild(para);
     hero.id = "hero";
-    child1.classList.add("heroChild");
-    child3.classList.add("heroChild");
-    child4.classList.add("heroChild");
-    hero.appendChild(child1);
-    hero.appendChild(child3);
-    hero.appendChild(child4);
+    heroChild2.classList.add("heroChild2");
+    heroChild3.classList.add("heroChild3");
+    hero.appendChild(heroChild2);
+    hero.appendChild(heroChild3);
 
     const img1 = new Image();
     const img2 = new Image();
@@ -37,12 +30,10 @@ function heroContent(){
     img2.id = "donut";
     img3.src = combo;
     img3.id = "combo";
-    child4.appendChild(img3);
-    child4.appendChild(paraDiv);
+    heroChild3.appendChild(img3);
+    heroChild3.appendChild(paraDiv);
     hero.appendChild(img1);
     hero.appendChild(img2);
     
-    return hero;
 }
-const home = heroContent();
-export default home;
+export default heroContent;

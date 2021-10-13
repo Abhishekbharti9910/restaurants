@@ -30,6 +30,7 @@
 body {
     background-color: #121317;
     height: 100%;
+    /* overflow: hidden; */
 }
 
 h1 {
@@ -100,49 +101,19 @@ nav {
     position: relative;
 }
 
-#hero>.heroChild:nth-child(1) {
-    /* display: flex; */
-    width: 180px;
-    height: 430px;
-    /* height: auto; */
-    background-color: var(--btn);
-    float: left;
-    content: "";
-    transform: rotate(49deg);
-    position: absolute;
-    top: 91px;
-}
-
-#hero>.heroChild:nth-child(1)::before {
-    width: 182px;
-    height: 163px;
-    background-color: var(--btn);
+.heroChild1 {
+    width: 20px;
+    height: 423px;
     content: '';
+    background-color: var(--btn);
     position: absolute;
-    border-radius: 35%;
-    left: -1px;
-    top: -96px;
+    border-radius: 0%;
+    left: 0px;
+    top: 261px;
 }
 
-#hero>.heroChild:nth-child(1)::after {
-    width: 162px;
-    height: 255vh;
-    background-color: #bb2020;
-    content: '';
-    position: absolute;
-    border-radius: 0px 0 25% 14%;
-    left: 176px;
-    bottom: -133px;
-    transform: rotate(41deg);
-}
 
-#hero>.heroChild:nth-child(2)>h2{
-    color: var(--btn);
-}
-#hero>.heroChild:nth-child(2)>h2:hover{
-    transform: scale(1.1);
-}
-#hero>.heroChild:nth-child(2){
+.heroChild2{
     width: 292px;
     position: absolute;
     right: 69px;
@@ -155,7 +126,7 @@ nav {
     font-size: x-large;
 
 }
-#hero>.heroChild:nth-child(3){
+.heroChild3{
     width: 600px;
     height: 200px;
     position: absolute;
@@ -190,14 +161,11 @@ p{
     border-radius: 25%;
 
 }
-@keyframes pulse-animation {
-    0% {
-      box-shadow: 0 0 0 0px rgba(155, 151, 151, 0.3);
-    }
-    100% {
-      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
-    }
-  }
-/* .road{
-  
-} */
+
+
+/* inactive */
+.inactive{
+    display: none;
+}
+
+

@@ -1,0 +1,36 @@
+
+#menu-bar{
+    z-index: 15;
+    background-color: var(--lightText);
+    opacity: 0.6;
+    width: 80vw;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+
+}
+.menu-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 12px;
+}
+.dish-image-tag{
+    width: 267px;
+    border-radius: 18px;
+}
+.dish-pic{
+    /* background-color: var(--lightblack); */
+    margin: 12px 6px 12px 6px;
+}
+.dish-info > p{
+    color: var(--lightblack);
+    font-size: 1em;
+}

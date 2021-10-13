@@ -1,7 +1,7 @@
 import './style.css';
 import Icon from './assetsDir/logo.png';
 import menu from './menu';
-// import home from "./home";
+import home from "./home";
 const btnCreation = (btnName)=>{
     const Btn = document.createElement("button");
     Btn.id = btnName;
@@ -53,8 +53,15 @@ const header = ()=>{
     return header;
 }
 
+const heroDesign = ()=>{
+        const hero = document.createElement("div");
+        let child1 = document.createElement("div");
+        hero.id = "hero";
+        child1.classList.add("heroChild1");
+        hero.appendChild(child1);
+        return hero;
+}
 
-// logo heading
 const heading = ()=>{
     let navElement = document.createElement("h1");
     navElement.innerHTML = "Street Stalker";
@@ -75,11 +82,12 @@ const initialise = function () {
     content.appendChild(heading());
 
     //home page hero content
-    content.appendChild(menu);
+    content.appendChild(heroDesign());
+    content.appendChild(menu());
 }
 
 const website = (()=>{
     initialise();
 
     
-})();
+})()
