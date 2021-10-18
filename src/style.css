@@ -113,7 +113,7 @@ nav {
 }
 
 
-.heroChild2{
+.homeChild2{
     width: 292px;
     position: absolute;
     right: 69px;
@@ -126,7 +126,7 @@ nav {
     font-size: x-large;
 
 }
-.heroChild3{
+.homeChild3{
     width: 600px;
     height: 200px;
     position: absolute;
@@ -139,7 +139,7 @@ nav {
 p{
     color: var(--lightText);
     text-align: center;
-    line-height: 4px;
+    /* line-height: 4px; */
 }
 #burger{
     width: 160px;
@@ -162,10 +162,25 @@ p{
 
 }
 
+@media only screen and (max-width: 600px) {
+    .homeChild2{
+        width: 254px;
+right: 69px;
+top: 267px;
+font-size: large;
+    }
+    #burger{
+        top: 80px;
+    }
+    .homeChild3 {
+        width: 357px;
+        height: 69px;
+        top: 649px;
+        left: -2px;
+    }
+    #donut{
+        top: 500px;
+left: 200px;
+    }
 
-/* inactive */
-.inactive{
-    display: none;
 }
-
-

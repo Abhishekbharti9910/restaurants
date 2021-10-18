@@ -3,23 +3,27 @@ import donut from './assetsDir/donut.png'
 import combo from './assetsDir/combo.png'
 
 
-    function heroContent(){
-    const hero = document.querySelector("#hero");
-    let heroChild2 = document.createElement("div");
-    let heroChild3 = document.createElement("div");
+    function homeContent(){
+    const content = document.querySelector("#hero");
+    const home = document.createElement("div");
+    home.id = "home-page";
+    home.classList.add("page");
+    content.append(home);
+    let homeChild2 = document.createElement("div");
+    let homeChild3 = document.createElement("div");
     let orderElement = document.createElement("h2");
     let child3Text = document.createElement("h1");
     child3Text.innerHTML = "We serve the street taste to your door step";
-    heroChild2.appendChild(child3Text);
+    homeChild2.appendChild(child3Text);
     let paraDiv = document.createElement("div");
     let para = document.createElement("p");
     para.innerHTML = 'Dilever street food from your local favourite in a instant';
     paraDiv.appendChild(para);
-    hero.id = "hero";
-    heroChild2.classList.add("heroChild2");
-    heroChild3.classList.add("heroChild3");
-    hero.appendChild(heroChild2);
-    hero.appendChild(heroChild3);
+
+    homeChild2.classList.add("homeChild2");
+    homeChild3.classList.add("homeChild3");
+    home.appendChild(homeChild2);
+    home.appendChild(homeChild3);
 
     const img1 = new Image();
     const img2 = new Image();
@@ -30,10 +34,10 @@ import combo from './assetsDir/combo.png'
     img2.id = "donut";
     img3.src = combo;
     img3.id = "combo";
-    heroChild3.appendChild(img3);
-    heroChild3.appendChild(paraDiv);
-    hero.appendChild(img1);
-    hero.appendChild(img2);
+    homeChild3.appendChild(img3);
+    homeChild3.appendChild(paraDiv);
+    home.appendChild(img1);
+    home.appendChild(img2);
     
-}
-export default heroContent;
+    }
+export default homeContent;

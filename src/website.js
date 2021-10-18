@@ -44,7 +44,7 @@ const header = ()=>{
 // button created and added in navbar
     const homeBtn = btnCreation("home");
     const menuBtn = btnCreation("menu");
-    const contactBtn = btnCreation("contact");
+    const contactBtn = btnCreation("contact us");
     nav.appendChild(homeBtn);
     nav.appendChild(menuBtn);
     nav.appendChild(contactBtn);
@@ -69,6 +69,28 @@ const heading = ()=>{
     return navElement;
 }
 
+// adding inactive to all page
+const makeInactive = ()=>{
+    const pages = document.querySelectorAll(".page");
+    pages.forEach(page => {
+        page.style.display = "none";
+    })
+}
+
+// nav buttons added eventlistner
+const choiceOfPage = ()=>{
+    const btns = document.querySelectorAll('.btn');
+
+    btns.forEach(btn => {
+        btn.addEventListener("click", (e)=>{
+            menu();//need to reload to get caught by make in active
+            makeInactive();
+            let active = document.getElementById(`${e.target.id}-page`);
+            active.style.removeProperty("display");
+        });
+    }); 
+}
+
 
 const initialise = function () {
     const content = document.createElement("div");
@@ -83,11 +105,13 @@ const initialise = function () {
 
     //home page hero content
     content.appendChild(heroDesign());
-    content.appendChild(menu());
+    // content.appendChild();
+    home();
+    // menu();
 }
 
 const website = (()=>{
     initialise();
+    choiceOfPage();
 
-    
 })()
